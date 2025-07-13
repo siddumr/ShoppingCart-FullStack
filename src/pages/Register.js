@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import api from '../api';
 import { useNavigate } from 'react-router-dom';
+import '../App.css'; // Ensure this is imported to apply styles
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -23,8 +24,8 @@ const Register = () => {
   };
 
   return (
-    <div style={{ maxWidth: 400, margin: '2rem auto' }}>
-      <h2>Register</h2>
+    <div className="login-container">
+      <h2 className='product-header'>Register</h2>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: '1rem' }}>
           <label>Username:</label><br />
@@ -33,7 +34,7 @@ const Register = () => {
             required
             value={username}
             onChange={e => setUsername(e.target.value)}
-            style={{ width: '100%', padding: '0.5rem' }}
+            className="input-field"
           />
         </div>
         <div style={{ marginBottom: '1rem' }}>
@@ -43,11 +44,11 @@ const Register = () => {
             required
             value={password}
             onChange={e => setPassword(e.target.value)}
-            style={{ width: '100%', padding: '0.5rem' }}
+            className="input-field"
           />
         </div>
         {msg && <p>{msg}</p>}
-        <button type="submit" style={{ padding: '0.5rem 1rem' }}>Register</button>
+        <button type="submit" className="action-btn">Register</button>
       </form>
     </div>
   );

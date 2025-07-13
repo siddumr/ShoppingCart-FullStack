@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../App.css';
+
 const Navbar = () => {
   const navigate = useNavigate();
   const userStr = localStorage.getItem('user');
@@ -13,19 +14,21 @@ const Navbar = () => {
 
   return (
     <nav>
-  <div className="brand">Shopping Cart</div>
-  <div className="user-info">
-    {userId ? (
-      <>
-        Hello, User {userId} |
-        <button onClick={handleLogout}>Logout</button>
-      </>
-    ) : (
-      <Link to="/login" style={{ color: 'white' }}>Login</Link>
-    )}
-  </div>
-</nav>
-
+      <div className="brand">Shopping Cart</div>
+      <div className="user-info">
+        {userId ? (
+          <>
+            Hello, User {userId} |
+            <button onClick={handleLogout}>Logout</button>
+          </>
+        ) : (
+          <>
+            <Link to="/login" style={{ color: 'white', marginRight: '1rem' }}>Login</Link>
+            <Link to="/register" style={{ color: 'white' }}>Register</Link>
+          </>
+        )}
+      </div>
+    </nav>
   );
 };
 
