@@ -31,7 +31,7 @@ const Cart = () => {
     try {
       await api.delete(`/cart/remove/${itemId}`);
       alert('Item removed from cart');
-      fetchCart(); // refresh cart
+      fetchCart();
     } catch (err) {
       alert('Failed to remove');
     }

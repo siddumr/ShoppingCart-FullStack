@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CartItem = ({ item, onRemove }) => {
-  if (!item || !item.item) return null; // Skip rendering if bad data
+  if (!item || !item.item) return null; 
 
   const total = item.item.price * item.quantity;
 

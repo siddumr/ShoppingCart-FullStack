@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../api';
 import { useNavigate } from 'react-router-dom';
-import '../App.css'; // Ensure CSS is imported
+import '../App.css'; 
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);

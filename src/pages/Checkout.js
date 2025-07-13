@@ -14,7 +14,7 @@ const Checkout = () => {
     }
 
     const user = JSON.parse(userStr);
-    const userId = Number(user.id); // ensure it's a number
+    const userId = Number(user.id); 
 
     api.post('/checkout', { user_id: userId })
       .then(res => {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import api from '../api';
 import { useNavigate } from 'react-router-dom';
-import '../App.css'; // Ensure this is imported to apply styles
+import '../App.css'; 
 
 const Register = () => {
   const [username, setUsername] = useState('');

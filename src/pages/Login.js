@@ -15,15 +15,10 @@ const Login = () => {
     try {
      const response = await api.post('/users/login', { username: email, password });
 
-
-      // Assuming backend returns user data on success
       const user = response.data;
 
-      // Save user info in localStorage (simple auth management)
       localStorage.setItem("user", JSON.stringify({ id: response.data.user_id }));
 
-
-      // Redirect to products page after login
       navigate('/');
     } catch (err) {
       console.error(err);
